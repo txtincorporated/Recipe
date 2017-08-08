@@ -5,9 +5,9 @@
 var languageStrings = {
     'en': {
         'translation': {
-            'WELCOME' : "Welcome to the Breakfast Sandwich Recipe skill. ",
-            'TITLE'   : "Breakfast Sandwich",
-            'HELP'    : "This skill will show you how to make a breakfast sandwich.  You can ask for the list of ingredients, or just say begin cooking if you are ready. Once you are cooking, just say Next to advance to the next step in the recipe. You can also pause the recipe at any time by saying Pause.",
+            'WELCOME' : "Welcome to the Breakfast Sammitch Recipe skill. ",
+            'TITLE'   : "Breakfast Sammitch",
+            'HELP'    : "This skill will show you how to make a breakfast sammitch.  You can ask for the list of ingredients, or just say begin cooking if you are ready. Once you are cooking, just say Next to advance to the next step in the recipe. You can also pause the recipe at any time by saying Pause.",
             'STOP'    : "Okay, see you next time! "
         }
     }
@@ -34,8 +34,8 @@ var data = {
 };
 
 var welcomeCardImg = {
-    smallImageUrl: 'https://s3.amazonaws.com/webappvui/img/breakfast_sandwich_small.png',
-    largeImageUrl: 'https://s3.amazonaws.com/webappvui/img/breakfast_sandwich_large.png'
+    smallImageUrl: 'https://s3.amazonaws.com/webappvui/img/breakfast_sammitch_small.png',
+    largeImageUrl: 'https://s3.amazonaws.com/webappvui/img/breakfast_sammitch_large.png'
 };
 // 2. Skill Code =======================================================================================================
 
@@ -51,7 +51,7 @@ exports.handler = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
 
     // alexa.appId = 'amzn1.echo-sdk-ams.app.1234';
-    // alexa.dynamoDBTableName = 'RecipeSkillTable'; // creates new table for session.attributes
+    alexa.dynamoDBTableName = 'RecipeSkillTable'; // creates new table for session.attributes
 
     alexa.resources = languageStrings;
     alexa.registerHandlers(handlers);
